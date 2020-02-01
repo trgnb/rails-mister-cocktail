@@ -1,5 +1,8 @@
 class DosesController < ApplicationController
-  before_action :set_cocktail, only: [:new, :create]
+  before_action :set_cocktail, only: [:new, :create, :index]
+  def index
+    @doses = Doses.all
+  end
 
   def new
     @dose = Dose.new

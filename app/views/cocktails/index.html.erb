@@ -1,1 +1,14 @@
 index.html.erb
+<%= form_for :cocktail do |f| %>
+  Find your favorite cocktail: <%= f.text_field :name %><br />
+  <%= f.submit "Seach Cocktail" %>
+<% end %>
+
+<div class="cards">
+    <% @cocktails.each do |cocktail| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      <h2> <%= cocktail.name %> </h2>
+      <p><%= link_to 'See details', cocktail %> </p>
+    </div>
+  <% end %>
+</div>

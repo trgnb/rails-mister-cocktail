@@ -5,7 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
 Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
@@ -13,6 +12,14 @@ Ingredient.create(name: "mint leaves")
 Cocktail.create(name: "Margarita")
 Cocktail.create(name: "Piña Colada")
 Cocktail.create(name: "Old Fashioned")
+
+margarita = Cocktail.new(name: "Margarita")
+margarita.save!
+
+dose1 = Dose.new(description: "5ml")
+dose1.cocktail = margarita
+
+Dose.create(description: "5ml", cocktail_id: 1, ingredient_id: 1)
 
 # require 'rest-client'
 
