@@ -10,17 +10,21 @@ Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
 
+Cocktail.create(name: "Margarita")
+Cocktail.create(name: "Piña Colada")
+Cocktail.create(name: "Old Fashioned")
+
 # require 'rest-client'
 
-# rm = RestClient.get "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
+# rm = RestClient.get "https://www.thecocktaildb.com/api/json/v1/1/search.php?s"
 # rm_array = JSON.parse(rm)[“results”]
 
-# rm_array.each do |character|
-#  Character.create(
-#  name: character[“name”],
-#  status: character[“status”],
-#  species: character[“species”],
-#  gender: character[“gender”],
-#  image: character[“image”]
+# rm_array.each do |cocktail|
+#  Cocktail.create(
+#  name: cocktail[“strDrink”],
+#  status: cocktail[“status”],
+#  species: cocktail[“species”],
+#  gender: cocktail[“gender”],
+#  image: cocktail[“image”]
 #  )
 # end
