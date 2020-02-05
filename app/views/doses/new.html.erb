@@ -1,7 +1,6 @@
-new.html.erb
-
+<p> Add a new ingredient to the recipe </p>
 <%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.input :description %>
   <%= f.association :ingredient, collection: Ingredient.all %>
-  <%= f.submit "Add a new dose" %>
+  <%= f.submit "Add a new ingredient" %>
 <%  end %>
