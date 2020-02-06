@@ -1,7 +1,8 @@
-<%= form_for :cocktail do |f| %>
-  Find your favorite cocktail: <%= f.text_field :name %><br />
-  <%= f.submit "Search Cocktail" %>
-<% end %>
+<form action="/cocktails" method="get">
+  <input type="text" name="query" placeholder="Find your favorite cocktail?">
+  <input type="submit">
+</form>
+
 
 <div class="cards">
     <% @cocktails.each do |cocktail| %>
