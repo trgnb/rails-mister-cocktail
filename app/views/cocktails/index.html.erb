@@ -1,8 +1,7 @@
-<form action="/cocktails" method="get">
-  <input type="text" name="query" placeholder="Find your favorite cocktail?">
+<form class='form' action="/cocktails" method="get">
+  <input class='form1' type="text" name="query" placeholder="Find your favorite cocktail">
   <input type="submit">
 </form>
-
 
 <div class="cards">
     <% @cocktails.each do |cocktail| %>

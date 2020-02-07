@@ -13,13 +13,14 @@ Cocktail.create(name: "Margarita")
 Cocktail.create(name: "Piña Colada")
 Cocktail.create(name: "Old Fashioned")
 
-margarita = Cocktail.new(name: "Margarita")
-margarita.save!
+# margarita = Cocktail.new(name: "Margarita")
+# margarita.save!
 
-dose1 = Dose.new(description: "5ml")
-dose1.cocktail = margarita
+# dose1 = Dose.new(description: "5ml")
+# dose1.cocktail = margarita
 
 Dose.create(description: "5ml", cocktail_id: 1, ingredient_id: 1)
+Dose.create(description: "500gr", cocktail_id: 2, ingredient_id: 2)
 
 # require 'rest-client'
 

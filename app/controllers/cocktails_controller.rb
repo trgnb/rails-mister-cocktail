@@ -4,7 +4,7 @@ class CocktailsController < ApplicationController
     @query = params[:query]
     if @query
       # is there a cocktail that matches this name?
-      @cocktail = Cocktail.find_by(name: @query)
+      @cocktail = Cocktail.find_by(name: @query.titleize)
       redirect_to cocktail_path(@cocktail) if @cocktail
     end
     @cocktails = Cocktail.all

@@ -12,13 +12,27 @@
 @import "components/index";
 @import "pages/index";
 
+body {
+  padding: 20px;
+  padding-top: 0;
+}
+
+.form{
+display:flex;
+justify-content: flex-end;
+  .form1 {
+    width: 220px;
+  }
+}
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
-  grid-auto-rows: 500px;
+  grid-auto-rows: 350px;
     h2 {
       text-align: center;
+      padding: 20px;
     }
 
     p {
